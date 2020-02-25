@@ -14,7 +14,7 @@ This project will create a Line bot, which may contain follow factor:
 
 # APPLICATION
 ## News API
-The first one we want to create is a reponses of public health care news, it allows customes to konw the news happended recently. In preliminary investigation, We want to use [news api] or [google news api]. [new api] can provide new in josn when we apply in url.get; And [google news api] can return the results of key word in google. In this program we want bot return the top 3 daily news about health in CHINA. But there are still some problems. In [news api] we don't kown if it can work without registion. And [google news api] is an abandoned servers though it still works now.
+The first one we want to create is a reponses of public health care news, it allows customes to konw the news happended recently. In preliminary investigation, We want to use [news api](https://newsapi.org/s/china-health-news-api) or [google news api](https://newsapi.org/s/google-news-api). [new api] can provide new in josn when we apply in url.get; And [google news api] can return the results of key word in google. In this program we want bot return the top 3 daily news about health in CHINA. But there are still some problems. In [news api] we don't kown if it can work without registion. And [google news api] is an abandoned servers though it still works now.
 
 In conclution we prefer using **[news api]**, we will try to build connect with heroku and new api fristly.
 
