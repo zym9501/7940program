@@ -80,7 +80,7 @@ def callback():
 # Handler function for Text Message
 def handle_TextMessage(event): 
 
-    GOOGLE_API_KEY = 'AIzaSyAH5qFJ9JfgCdblC-6Y282wFMxCXA6TeHM'
+    GOOGLE_API_KEY = '' # due to confidentiality, it will not be published on GitHub
 
     address = event.message.text
     addurl = 'https://maps.googleapis.com/maps/api/geocode/json?key={}&address={}&sensor=false'.format(GOOGLE_API_KEY,address)
