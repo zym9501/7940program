@@ -8,5 +8,6 @@
 ### Task List
 - [x] Find Reference
 - [x] Initial the chatbot
-- [ ] Implement own function
-- [ ] Integrated into one bot
+- [x] Implement own function
+- [x] Integrated into one bot
+- [ ] To prepare finial presentation and report

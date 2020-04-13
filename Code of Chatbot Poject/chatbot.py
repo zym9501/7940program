@@ -3,12 +3,19 @@ from __future__ import unicode_literals
 import os
 import sys
 import redis
+
+import random
 import requests
 from argparse import ArgumentParser
 from bs4 import BeautifulSoup
+
 from flask import Flask, request, abort
-from linebot import (LineBotApi, WebhookParser)
-from linebot.exceptions import (InvalidSignatureError)
+from linebot import (
+    LineBotApi, WebhookParser
+    )
+from linebot.exceptions import (
+    InvalidSignatureError
+    )
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
     TemplateSendMessage, ConfirmTemplate, MessageAction,
@@ -161,7 +168,9 @@ def handle_TextMessage(event):
                         title=str(hot_news[2][0],encoding='utf-8'),
                         text=str(hot_news[3][0],encoding='utf-8'),
                         actions=[
-                            URIAction(uri=str(hot_news[0][0],encoding='utf-8'), label='View More')
+                            URIAction(
+                                uri=str(hot_news[0][0],encoding='utf-8'), 
+                                label='View More')
                         ]
                     ),
                     CarouselColumn(
@@ -169,7 +178,9 @@ def handle_TextMessage(event):
                         title=str(hot_news[2][1], encoding='utf-8'),
                         text=str(hot_news[3][1], encoding='utf-8'),
                         actions=[
-                            URIAction(uri=str(hot_news[0][1], encoding='utf-8'), label='View More')
+                            URIAction(
+                                uri=str(hot_news[0][1], encoding='utf-8'), 
+                                label='View More')
                         ]
                     ),
                     CarouselColumn(
@@ -177,7 +188,9 @@ def handle_TextMessage(event):
                         title=str(hot_news[2][2], encoding='utf-8'),
                         text=str(hot_news[3][2], encoding='utf-8'),
                         actions=[
-                            URIAction(uri=str(hot_news[0][2], encoding='utf-8'), label='View More')
+                            URIAction(
+                                uri=str(hot_news[0][2], encoding='utf-8'), 
+                                label='View More')
                         ]
                     )
                 ]
@@ -189,7 +202,7 @@ def handle_TextMessage(event):
         )
 
     else:# ZHOU XI HANG
-        GOOGLE_API_KEY = '' # due to confidentiality, it will not be published on GitHub
+        GOOGLE_API_KEY = 'AIzaSyAH5qFJ9JfgCdblC-6Y282wFMxCXA6TeHM' # due to confidentiality, it will not be published on GitHub
 
         address = event.message.text
         addurl = 'https://maps.googleapis.com/maps/api/geocode/json?key={}&address={}&sensor=false'.format(GOOGLE_API_KEY,address)
